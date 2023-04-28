@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(255, 234, 196); 
+}
+#heading{
+    background-color: orangered;
+    color: white;
+    text-align: center;
+}
+
+#profile-tab{
+    background-color: rgb(255, 234, 196); 
+    font-weight: 700;
+    color: black;
+    border: 1px;
+    border-style: solid;
+    border-color: orangered;
+}
+#profile-tab:hover{
+    background-color: orangered;
+    color: white;
+}
+#examsh-tab{
+    background-color: rgb(255, 234, 196); 
+    font-weight: 700;
+    color: black;
+    border: 1px;
+    border-style: solid;
+    border-color: orangered;
+
+}
+#examsh-tab:hover{
+    background-color: orangered;
+    color: white
+
+}
+#result-tab{
+
+    background-color: rgb(255, 234, 196); 
+    font-weight: 700;
+    color: black;
+    border: 1px;
+    border-style: solid;
+    border-color: orangered;
+
+
+}
+#result-tab:hover
+{
+    background-color: orangered;
+    color: white;
+
+}
+#assesment-tab{
+    background-color: rgb(255, 234, 196); 
+    font-weight: 700;
+    color: black;
+    border: 1px;
+    border-style: solid;
+    border-color: orangered;
+
+}
+#assesment-tab:hover{
+    background-color: orangered;
+    color: white;
+    
+}
+#results{
+    background-color: black;
+}
+

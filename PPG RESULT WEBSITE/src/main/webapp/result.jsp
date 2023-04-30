@@ -2,7 +2,19 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*" %>
 
-
+  <% String id = request.getParameter("regno");
+                ResultSet rs=null;
+              try{
+              	String url = "jdbc:mysql://db4free.net:3306/result_ms";
+          		String userName = "rootuseronline";
+          		String passWord = "rootuser123";
+          		String query ="select * from internalone where regno='"+id+"';";
+          		
+          		Connection con = DriverManager.getConnection(url,userName,passWord);
+          		Statement st = con.createStatement();
+                rs = st.executeQuery(query);
+          	    rs.next();
+    %>
 <!doctype html>
 <html lang="en">
 
@@ -59,23 +71,33 @@
               table-primary
               align-middle">
                 <thead class="table-light">
-                  <caption>Table Name</caption>
+                  <caption>Data corresponds to college records</caption>
                   <tr>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                    <th>Column 3</th>
+                    <th>STUDENT DETAILS </th>
+                    <th></th>
+                    <th></th>
                   </tr>
                   </thead>
                   <tbody class="table-group-divider">
                     <tr class="table-primary" >
-                      <td scope="row">Item</td>
-                      <td>Item</td>
-                      <td>Item</td>
+                      <td scope="row">NAME </td>
+                      <td><%= rs.getString(1) %></td>
+                      <td></td>
                     </tr>
                     <tr class="table-primary">
-                      <td scope="row">Item</td>
-                      <td>Item</td>
-                      <td>Item</td>
+                      <td scope="row">COLLAGE </td>
+                      <td>PPG Institute Of Technology</td>
+                      <td></td>
+                    </tr>
+                     <tr class="table-primary">
+                      <td scope="row">BRANCH & DEPARTMENT</td>
+                      <td><%= rs.getString(4) + rs.getString(3) %></td>
+                      <td></td>
+                    </tr>
+                     <tr class="table-primary">
+                      <td scope="row">YEAR</td>
+                      <td><%= rs.getString(6) %>Year</td>
+                      <td></td>
                     </tr>
                   </tbody>
                   <tfoot>
@@ -113,19 +135,7 @@
               </tr>
               </thead>
               <tbody class="table-group-divider">
-              <% String id = request.getParameter("regno");
-                ResultSet rs=null;
-              try{
-              	String url = "jdbc:mysql://db4free.net:3306/result_ms";
-          		String userName = "rootuseronline";
-          		String passWord = "rootuser123";
-          		String query ="select * from internalone where regno='"+id+"';";
-          		
-          		Connection con = DriverManager.getConnection(url,userName,passWord);
-          		Statement st = con.createStatement();
-                rs = st.executeQuery(query);
-          	    rs.next();
-          	%>
+            
                 <tr class="table-primary" >
                   <td scope="row">01</td>
                   <td><%=rs.getString(1) %></td>

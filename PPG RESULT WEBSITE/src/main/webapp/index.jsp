@@ -19,7 +19,7 @@
 
 
 
-<div class=" grid-layout container-sm">
+
 
   <header>
     <!-- place navbar here -->
@@ -28,7 +28,7 @@
   </header>
   <main>
 
-
+<div class=" grid-layout container-sm">
 
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-9 col-lg-6 col-xl-5">

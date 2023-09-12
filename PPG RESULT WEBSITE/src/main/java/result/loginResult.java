@@ -28,7 +28,7 @@ public class loginResult extends HttpServlet {
 		 String dob = request.getParameter("DOB");
 		 
 		 
-		 String url = "jdbc:mysql://db4free.net:3306/result_ms";
+		    String url = "jdbc:mysql://db4free.net:3306/result_ms";
 			String userName = "rootuseronline";
 			String passWord = "rootuser123";
 			Connection con ;
@@ -42,8 +42,8 @@ public class loginResult extends HttpServlet {
 		          st = con.createStatement();
 		          rs = st.executeQuery(query);
 		          rs.next();
-		        
-		        if(dob.equals(rs.getString(15))) { 
+		      
+		        if(dob.equals(rs.getString(15))){ 
 		       
 		        	
 		        	 RequestDispatcher rd = request.getRequestDispatcher("result.jsp"); 

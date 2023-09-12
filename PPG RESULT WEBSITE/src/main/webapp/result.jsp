@@ -2,18 +2,19 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*" %>
 
+
   <% String id = request.getParameter("regno");
-                ResultSet rs=null;
+                ResultSet rst =null;
               try{
               	String url = "jdbc:mysql://db4free.net:3306/result_ms";
           		String userName = "rootuseronline";
           		String passWord = "rootuser123";
-          		String query ="select * from internalone where regno='"+id+"';";
+          		String query ="select * from rms where regno='"+id+"';";
           		
           		Connection con = DriverManager.getConnection(url,userName,passWord);
           		Statement st = con.createStatement();
-                rs = st.executeQuery(query);
-          	    rs.next();
+                rst = st.executeQuery(query);
+          	    rst.next();
     %>
 <!doctype html>
 <html lang="en">
@@ -32,7 +33,7 @@
 </head>
 
 <body>
-  <div class=" grid-layout container-sm">
+ 
   <header id="heading">
     <!-- place navbar here -->
 
@@ -42,7 +43,7 @@
   <br><br>
   <main>
 
-
+ <div class=" grid-layout container-sm">
  <!-- Nav tabs -->
  <ul class="nav nav-tabs" id="myTab" role="tablist">
    <li class="nav-item" role="presentation">
@@ -81,7 +82,7 @@
                   <tbody class="table-group-divider">
                     <tr class="table-primary" >
                       <td scope="row">NAME </td>
-                      <td><%= rs.getString(1) %></td>
+                      <td><%= rst.getString(1) %></td>
                       <td></td>
                     </tr>
                     <tr class="table-primary">
@@ -91,12 +92,12 @@
                     </tr>
                      <tr class="table-primary">
                       <td scope="row">BRANCH & DEPARTMENT</td>
-                      <td><%= rs.getString(4) + rs.getString(3) %></td>
+                      <td><%= rst.getString(4) + " " + rst.getString(3) %></td>
                       <td></td>
                     </tr>
                      <tr class="table-primary">
                       <td scope="row">YEAR</td>
-                      <td><%= rs.getString(6) %>Year</td>
+                      <td><%= rst.getString(6) + " Year" %> </td>
                       <td></td>
                     </tr>
                   </tbody>
@@ -104,6 +105,17 @@
                     
                   </tfoot>
               </table>
+              
+                      <%
+          	   
+              }
+              catch(Exception e11)
+              {
+              	e11.printStackTrace();
+              	
+              }
+              %>
+              
              </div>
              
 
@@ -111,9 +123,7 @@
    </div>
    <div class="tab-pane" id="examsh" role="tabpanel" aria-labelledby="exam_shedule-tab"> 
        
-    <h1>vengadesh</h1>
-<h2>vengadesh</h2> 
-<h3>vengadesg</h3>
+     <h3 style="margin-top:20px; color:grey;">No details of Exam Shedule found !</h3>
 
   </div>
    <div class="tab-pane" id="results" role="tabpanel" aria-labelledby="results-tab"> 
@@ -134,6 +144,23 @@
                 <th>Results</th>
               </tr>
               </thead>
+              
+              <%
+                ResultSet rs=null;
+              try{
+            	   	String url = "jdbc:mysql://db4free.net:3306/result_ms";
+              		String userName = "rootuseronline";
+              		String passWord = "rootuser123";
+          		String query1 ="select * from internalone where regno='"+id+"';";
+          		
+          		Connection con = DriverManager.getConnection(url,userName,passWord);
+          		Statement st = con.createStatement();
+                rs = st.executeQuery(query1);
+          	    rs.next();
+    %>
+              
+              
+              
               <tbody class="table-group-divider">
             
                 <tr class="table-primary" >
@@ -144,6 +171,8 @@
                 </tr>
                 <tr class="table-primary">
                   <td scope="row">01</td>
+                  
+                  
                   <td><%=rs.getString(3) %></td>
                   <td><%=rs.getString(4) %></td>
                   <td>PASS</td>
@@ -193,9 +222,8 @@
          </div>
      </div>
    <div class="tab-pane" id="assesment" role="tabpanel" aria-labelledby="results-tab"> 
-<h1>nethaji</h1>
-<h2>nethaji</h2>
-<h3>nethaji</h3>
+
+    <h3 style="margin-top:20px; color:grey;">No details of internal Assesment found !</h3>
 
    </div>
 
@@ -207,7 +235,7 @@
   <footer>
     <!-- place footer here -->
   </footer>
-  </div>,k
+  </div>
   <!-- Bootstrap JavaScript Libraries -->
  <script 
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

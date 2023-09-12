@@ -1,0 +1,68 @@
+@charset "ISO-8859-1";
+
+  @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Bungee+Outline&family=Cinzel&family=Courgette&family=Josefin+Sans:wght@500&family=Londrina+Outline&family=Monoton&family=Poppins:wght@400;600&family=Prompt:ital@1&family=Tenor+Sans&family=Zen+Tokyo+Zoo&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+#login .log-box input{
+    width: 85%;
+    height: 45px;
+    margin-bottom: 12px;
+    border: 1.3px solid rgb(13, 110, 253);
+    border-radius: 4px;
+    color: black;
+    padding-left:12px ;
+    font-weight: 500;
+}
+.log-box input:focus{
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.658);
+   border: 1.3px solid rgb(13, 110, 253);
+   outline: none;
+}
+
+#login .log-box form button{
+    width: 85%;
+    height: 50px;
+    background-color: rgb(13, 110, 253);
+    color: white;
+    font-weight: 500;
+}
+select{
+    outline: none; 
+    border-color:  rgb(13, 110, 253);
+
+}
+#login .log-box a button:hover{
+    background-color:rgb(13, 110, 253);
+}
+#login .log-box select{
+    width: 85%;
+    height: 45px;
+    margin-bottom: 12px;
+    border: 1.3px solidrgb(13, 110, 253);
+    border-radius: 4px;
+    
+    color: black;
+    padding-left:12px ;
+    font-weight: 500;
+}
+#login .log-box select option{
+   
+    color: black;
+    padding-left:12px ;
+    font-weight: 500;
+}
+footer{
+    
+    width: 100%;
+    height: 20vh;
+}
+footer p {
+    padding-top: 8px;
+}

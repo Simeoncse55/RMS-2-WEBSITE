@@ -1,0 +1,41 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Bungee+Outline&family=Cinzel&family=Courgette&family=Josefin+Sans:wght@500&family=Londrina+Outline&family=Monoton&family=Poppins:wght@400;600&family=Prompt:ital@1&family=Tenor+Sans&family=Zen+Tokyo+Zoo&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+
+}
+main .center{
+    background-color: rgb(248, 248, 248);
+    padding-top: 8px;
+    padding-left: 10px;
+    box-shadow: 0px 2px 0px 0px  rgb(13, 110, 253);
+   
+}
+main #stuDetails .box{
+    box-shadow: 0px 8px 5px 0px rgb(226, 226, 226);
+    margin-bottom: 30px;
+    width: 260px;
+    margin-left: 20px;
+    height: 75px;
+  
+}
+main #stuDetails .box p i{
+    color: rgb(0, 0, 0);
+}
+main .profileImg{
+    background-color: rgb(248, 248, 248);
+    box-shadow: 0px 2px 0px 0px  rgb(13, 110, 253);
+    padding-bottom: 18px;
+    padding-top: 8px;
+}
+
+main .mar{
+    margin-left: 10px;
+    margin-right: 10px;
+}
